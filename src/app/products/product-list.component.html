@@ -11,8 +11,12 @@
                [(ngModel)]='listFilter' />
       </div>
     </div>
-    <h2 *ngIf="products.length === 0">Loading...</h2>
-    <div class='row'
+    <div *ngIf="products.length === 0" style="text-align: center;">
+      <br /><br />
+      <span class="loader"></span>
+      <br /><br /><br />
+    </div>
+      <div class='row'
          *ngIf='listFilter'>
       <div class='col-md-6'>
         <h4>Filtered by: {{listFilter}}</h4>

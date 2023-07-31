@@ -3,7 +3,11 @@
     {{pageTitle + ': ' + (product?.name ? product?.name : '') }}
   </div>
 
-  <h2 *ngIf="!product">Loading...</h2>
+  <div *ngIf="!product" style="text-align: center;">
+    <br /><br />
+    <span class="loader"></span>
+    <br /><br /><br />
+  </div>
   <div class='card-body'
        *ngIf='product'>
     <div class='row'>
